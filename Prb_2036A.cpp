@@ -1,16 +1,23 @@
+/* This is a wrong solution
+i will return to it after learning stl*/
+
 #include <iostream>
 #include <cmath>
 using namespace std;
 int main () {
     int t,n; 
-    int diff;
     cin >> t;
-    for (int i = 0; i <= t; ++i){
+    for (int i = 0; i < t; ++i){
         cin >> n;
-        for (int j = 0; j <= n; ++j){
+        int diff = 0;
+        for (int j = 0; j < n; ++j){
             int x;
             cin >> x;
-            diff = abs(diff-x);
+            if (j == 0){
+                diff = x;
+            }else{
+                diff = abs(diff-x);
+            }
         }
         if (diff == 5 || diff == 7){
             cout << "Yes" << endl;
