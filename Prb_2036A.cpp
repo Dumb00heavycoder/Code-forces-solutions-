@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 int main () {
     int t,n; 
@@ -9,14 +10,14 @@ int main () {
         for (int j = 0; j <= n; ++j){
             int x;
             cin >> x;
-            diff -= x;
+            diff = abs(diff-x);
         }
-    }
-    if (abs(diff) == 5 || abs(diff) == 7){
-        cout << "Yes";
-    }
-    else {
-        cout << "NO";
+        if (diff == 5 || diff == 7){
+            cout << "Yes" << endl;
+        }
+        else {
+           cout << "NO"<< endl;
+        }
     }
     return 0;
 }
