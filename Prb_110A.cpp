@@ -7,8 +7,8 @@ int main (){
   int count = 0;
   cin >> n;
   for (char c : n){
-	if(c == "4" || c == "7"){
-		  count++;
+	if(c == '4' || c == '7'){
+		count++;
 	}
   }
 
